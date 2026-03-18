@@ -1,0 +1,1 @@
+select * from {{ref("clean_taxi_zone_lookup")}}

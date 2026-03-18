@@ -1,0 +1,108 @@
+models:
+  - name: clean_green_tripdata
+    columns:
+      - name: VendorID
+        tests:
+          - not_null
+
+      - name: passenger_count
+        tests:
+          - not_null
+
+      - name: pickup_datetime
+        tests:
+          - not_null
+
+      - name: dropoff_datetime
+        tests: 
+          - not_null
+        
+      - name: RateCode
+        tests:
+          - not_null
+          - accepted_values:
+               values: ["Standard rate","JFK","Newark","Nassau or Westchester","Negotiated fare","Group ride","unknown"]
+      - name: PULocationID
+        tests:
+          - not_null
+      - name: DOLocationID
+        tests:
+          - not_null
+      - name: payment_type
+        tests:
+          - not_null
+      - name: trip_distance
+        tests:
+          - not_null
+          - non_negative
+      - name: fare_amount
+        tests:
+          - not_null
+          - non_negative
+      - name: tip_amount
+        tests:
+          - not_null
+          - non_negative
+      - name: total_amount
+        tests:
+          - not_null
+          - non_negative
+
+  - name: clean_yellow_tripdata
+    columns:
+      - name: VendorID
+        tests:
+          - not_null
+
+      - name: passenger_count
+        tests:
+          - not_null
+
+      - name: pickup_datetime
+        tests:
+          - not_null
+
+      - name: dropoff_datetime
+        tests: 
+          - not_null
+        
+      - name: RateCode
+        tests:
+          - not_null
+          - accepted_values:
+               values: ["Standard rate","JFK","Newark","Nassau or Westchester","Negotiated fare","Group ride","unknown"]
+      - name: PULocationID
+        tests:
+          - not_null
+      - name: DOLocationID
+        tests:
+          - not_null
+      - name: payment_type
+        tests:
+          - not_null
+      - name: trip_distance
+        tests:
+          - not_null
+          - non_negative
+      - name: fare_amount
+        tests:
+          - not_null
+          - non_negative
+      - name: tip_amount
+        tests:
+          - not_null
+          - non_negative
+      - name: total_amount
+        tests:
+          - not_null
+          - non_negative
+
+  - name: clean_taxi_zone_lookup
+    columns:
+      - name: LocationID
+        tests:
+          - not_null
+          - unique
+
+      
+          

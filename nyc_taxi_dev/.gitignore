@@ -1,0 +1,5 @@
+
+target/
+dbt_packages/
+logs/
+nyc_taxi_dev/profiles.yml

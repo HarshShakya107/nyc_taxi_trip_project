@@ -1,0 +1,1 @@
+select * from {{source('source','raw_yellow_tripdata')}}
